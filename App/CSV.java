@@ -14,11 +14,10 @@ import java.util.Scanner;
 public class CSV {
 
     public static void read(VehicleList vehicleList) {
-        String file_path = System.getenv().get("COLLECTION");
+        String file_path = System.getenv("COLLECTION");
         File file = new File(file_path);
         try {
             Scanner reader = new Scanner(file);
-            if (file.exists()) {
                 Scanner scanner;
                 String line;
                 int index = 0;
@@ -67,11 +66,6 @@ public class CSV {
                     index = 0;
                 }
                 reader.close();
-            } else {
-                System.out.println("Файла с коллекцией нет");
-                file.createNewFile();
-                System.out.println("Создан файл " + file.getAbsolutePath());
-            }
         } catch (Exception e) {
             System.out.println("Файл с коллекцией прочитать нельзя");
         }

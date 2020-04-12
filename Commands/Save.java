@@ -31,7 +31,6 @@ public class Save extends Command {
                 System.out.println();
             } catch (Exception e) {
                 System.out.println("Нельзя записать коллекцию в этот файл\n");
-                return;
             }
         }
     }
