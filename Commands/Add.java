@@ -27,8 +27,7 @@ public class Add extends Command {
         boolean checking = false;
         while (!checking) {
             try {
-                String for_check = x;
-                Float.parseFloat(for_check);
+                Float.parseFloat(x);
                 checking = true;
             } catch (Exception e) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
@@ -56,8 +55,7 @@ public class Add extends Command {
         boolean checking = false;
         while (!checking) {
             try {
-                String for_check = y;
-                Float.parseFloat(for_check);
+                Float.parseFloat(y);
                 checking = true;
             } catch (Exception e) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
@@ -85,8 +83,7 @@ public class Add extends Command {
         boolean checking = false;
         while (!checking) {
             try {
-                String for_check = wheels;
-                Long.parseLong(for_check);
+                Long.parseLong(wheels);
                 checking = true;
             } catch (Exception e) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
@@ -114,8 +111,7 @@ public class Add extends Command {
         boolean checking = false;
         while (!checking) {
             try {
-                String for_check = enginePower;
-                Integer.parseInt(for_check);
+                Integer.parseInt(enginePower);
                 checking = true;
             } catch (Exception e) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
