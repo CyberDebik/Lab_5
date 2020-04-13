@@ -8,7 +8,7 @@ public class Check {
     /**
      * Добавляем разделитель, чтобы отделить команду
      *
-     * @param command - команда
+     * @param command команда
      * @return Возвращает строку с разделителем
      */
     public static String toCmd(String command) {
@@ -25,7 +25,7 @@ public class Check {
     /**
      * Проверяем, является ли строка числом типа int
      *
-     * @param number - число, которое надо проверить
+     * @param number число, которое надо проверить
      * @return Возвращает true, если число типа int
      */
     public static boolean checkInt(String number) {
@@ -35,7 +35,7 @@ public class Check {
     /**
      * Проверяем, является ли строка числом типа float
      *
-     * @param number - число, которое надо проверить
+     * @param number число, которое надо проверить
      * @return Возвращает true, если число типа float
      */
     public static boolean checkFloat(String number) {

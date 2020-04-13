@@ -1,7 +1,7 @@
 package Enums;
 
 /**
- * Класс с типами транспорта
+ * Enum с типами транспорта
  */
 public enum VehicleType {
     PLANE,

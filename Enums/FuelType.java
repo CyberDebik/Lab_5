@@ -1,7 +1,7 @@
 package Enums;
 
 /**
- * Класс с типами топлива
+ * Enum с типами топлива
  */
 public enum FuelType {
     GASOLINE,

@@ -18,8 +18,8 @@ public class Coordinates {
     /**
      * Конструктор
      *
-     * @param x - координата
-     * @param y - координата
+     * @param x координата
+     * @param y координата
      */
     public Coordinates(float x, Float y) {
         this.x = x;

@@ -29,7 +29,7 @@ public class VehicleList {
 
 
     /**
-     * Метод, добавляющтй камманды в коллекцию
+     * Метод, добавляющий камманды в коллекцию
      */
     private void setCommands() {
         commandMap.put("HELP", new Help());
@@ -53,7 +53,7 @@ public class VehicleList {
     /**
      * Метод для проверки и выполнения введённой команды
      *
-     * @param command - команда
+     * @param command команда
      * @throws IOException если что-то пойдет не так
      */
     public void commandChoose(String command) throws IOException {
