@@ -3,8 +3,7 @@ package Commands;
 import App.Check;
 import App.VehicleList;
 import Classes.Vehicle;
-import Enums.FuelType;
-import Enums.VehicleType;
+import Enums.*;
 
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class Add extends Command {
                 x = scanner.nextLine().trim();
             }
         }
-        while (!Check.checkFloat(x) || (Float.parseFloat(x) < -615)) {
+        while (Check.checkFloat(x) || (Float.parseFloat(x) < -615)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             x = scanner.nextLine().trim();
@@ -63,7 +62,7 @@ public class Add extends Command {
                 y = scanner.nextLine().trim();
             }
         }
-        while (!Check.checkFloat(y)) {
+        while (Check.checkFloat(y)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             y = scanner.nextLine().trim();
@@ -90,7 +89,7 @@ public class Add extends Command {
                 System.out.print(">");
                 wheels = scanner.nextLine().trim();
             }
-            while (!Check.checkInt(wheels)) {
+            while (Check.checkInt(wheels)) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
                 System.out.print(">");
                 wheels = scanner.nextLine().trim();
@@ -119,7 +118,7 @@ public class Add extends Command {
                 enginePower = scanner.nextLine().trim();
             }
         }
-        while (!Check.checkInt(enginePower) || (Integer.parseInt(enginePower) <= 0)) {
+        while (Check.checkInt(enginePower) || (Integer.parseInt(enginePower) <= 0)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             enginePower = scanner.nextLine().trim();

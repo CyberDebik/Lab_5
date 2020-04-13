@@ -16,7 +16,7 @@ public class Remove_by_id extends Command {
         String[] strings = data.split(" ");
         if (strings.length != 1) {
             System.out.println("Команда введена неверно\n");
-        } else if (strings[0].trim().isEmpty() || !Check.checkInt(strings[0].trim())) {
+        } else if (strings[0].trim().isEmpty() || Check.checkInt(strings[0].trim())) {
             System.out.println("Неправильный тип числа, повторите ввод\n");
         } else {
             long id = Long.parseLong(strings[0].trim());

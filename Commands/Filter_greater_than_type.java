@@ -22,7 +22,7 @@ public class Filter_greater_than_type extends Command {
         } else {
             type = strings[0].trim();
             number = strings[1].trim();
-            if (!Check.checkFloat(number) || number.isEmpty()) {
+            if (Check.checkFloat(number) || number.isEmpty()) {
                 System.out.println("Неправильный тип числа\n");
             } else {
                 float more_than = Float.parseFloat(number);

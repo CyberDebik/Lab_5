@@ -3,8 +3,7 @@ package Commands;
 import App.Check;
 import App.VehicleList;
 import Classes.Vehicle;
-import Enums.FuelType;
-import Enums.VehicleType;
+import Enums.*;
 
 import java.io.*;
 import java.time.ZonedDateTime;
