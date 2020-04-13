@@ -49,9 +49,6 @@ public class Vehicle {
      */
     private FuelType fuelType; //Поле не может быть null
 
-    /**
-     * Конструктор объекта
-     */
     public Vehicle() {
     }
 
