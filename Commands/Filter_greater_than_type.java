@@ -30,21 +30,21 @@ public class Filter_greater_than_type extends Command {
                     case ("coordinates"):
                         for (Vehicle vehicle : vehicleList.vehicles) {
                             if (more_than < vehicle.getCoordinates()) {
-                                System.out.println(vehicle.getAll());
+                                System.out.println(vehicle);
                             }
                         }
                         break;
                     case ("enginePower"):
                         for (Vehicle vehicle : vehicleList.vehicles) {
                             if (more_than < vehicle.getEnginePower()) {
-                                System.out.println(vehicle.getAll());
+                                System.out.println(vehicle);
                             }
                         }
                         break;
                     case ("numberOfWheels"):
                         for (Vehicle vehicle : vehicleList.vehicles) {
                             if (more_than < vehicle.getNumberOfWheels()) {
-                                System.out.println(vehicle.getAll());
+                                System.out.println(vehicle);
                             }
                         }
                         break;

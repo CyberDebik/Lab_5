@@ -18,7 +18,7 @@ public class Show extends Command {
             System.out.println("Команда введена неверно");
         } else {
             for (Vehicle vehicle : vehicleList.vehicles) {
-                System.out.println(vehicle.getAll());
+                System.out.println(vehicle);
             }
             System.out.println();
         }

@@ -3,6 +3,7 @@ package Classes;
 import Enums.*;
 
 import java.time.ZonedDateTime;
+import java.util.Comparator;
 
 /**
  * Класс транспорта
@@ -181,7 +182,8 @@ public class Vehicle {
      *
      * @return Возвращает информацию об объекте
      */
-    public String getAll() {
+    @Override
+    public String toString() {
         return name + "\n|id: " + id + "\n" +
                 "|Coordinates: (" + coordinates.getX() + "; " + coordinates.getY() + ")\n" +
                 "|Creation date: " + getCreationDate() + "\n" +
