@@ -1,13 +1,14 @@
 package Classes;
 
-import Enums.*;
+import Enums.FuelType;
+import Enums.VehicleType;
 
 import java.time.ZonedDateTime;
 
 /**
  * Класс транспорта
  */
-public class Vehicle {
+public class Vehicle implements Comparable<Vehicle> {
 
     /**
      * ID объекта
@@ -201,4 +202,8 @@ public class Vehicle {
         return name + "," + coordinates.getX() + "," + coordinates.getY() + "," + creationDate + "," + enginePower + "," + numberOfWheels + "," + type + "," + fuelType + "\n";
     }
 
+    @Override
+    public int compareTo(Vehicle anotherVehicle) {
+        return Long.compare(getSize(), anotherVehicle.getSize());
+    }
 }

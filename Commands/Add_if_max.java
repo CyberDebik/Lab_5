@@ -3,17 +3,14 @@ package Commands;
 import App.VehicleList;
 import Classes.Vehicle;
 
+import java.util.Collections;
+
 /**
  * Класс команды add_if_max
  */
 public class Add_if_max extends Command {
 
     private Add add = new Add();
-
-    /**
-     * Поле для сравнения
-     */
-    private long maxVh = 0;
 
     /**
      * Метод выполнения команды
@@ -27,17 +24,11 @@ public class Add_if_max extends Command {
         } else if (name.isEmpty()) {
             System.out.println("Вы не ввели имя\n");
         } else {
-            for (Vehicle vehicle : vehicleList.vehicles) {
-                if (maxVh < vehicle.getSize()) {
-                    maxVh = vehicle.getSize();
-                }
-            }
             Vehicle add_if_max = new Vehicle(name, add.setX(), add.setY(), add.setEnginePower(), add.setNumberOfWheels(), add.setVehicleType(), add.setFuelType());
-            vehicleList.vehicles.add(add_if_max);
-            if (add_if_max.getSize() < maxVh) {
-                vehicleList.vehicles.remove(add_if_max);
+            if (add_if_max.compareTo(Collections.max(vehicleList.vehicles)) <= 0 ) {
                 System.out.println("Элемент не максимальный\n");
             } else {
+                vehicleList.vehicles.add(add_if_max);
                 System.out.println("Элемент добавлен");
             }
         }
