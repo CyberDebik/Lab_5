@@ -14,7 +14,7 @@ public class Save extends Command {
      * Метод выполнения команды
      */
     @Override
-    public void execute(VehicleList vehicleList, String data) /*throws IOException*/ {
+    public void execute(VehicleList vehicleList, String data) {
         String file_path = System.getenv().get("COLLECTION");
         File file = new File(file_path);
         String[] strings = data.split(" ");
