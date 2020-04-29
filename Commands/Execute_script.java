@@ -41,7 +41,7 @@ public class Execute_script extends Command {
                 System.out.println("Вы не ввели имя файла");
             } else {
                 try {
-                    file = new File("/home/s284260/Lab5/" + file_name);
+                    file = new File("D:\\Бу итмо\\Лабы\\Прога\\Lab5\\" + file_name);
                     if (file.exists()) {
                         Scanner reader = new Scanner(file);
                         Scanner scanner;
@@ -52,8 +52,8 @@ public class Execute_script extends Command {
                                 command = scanner.nextLine();
                                 command = Check.toCmd(command);
                                 String[] for_check = command.split("! ");
-                                switch (for_check[0]) {
-                                    case "add": {
+                                switch (for_check[0].toUpperCase()) {
+                                    case "ADD": {
                                         String[] add = for_check[1].split(" ");
                                         if (add.length == 7) {
                                             vehicleList.vehicles.add(new Vehicle(add[0], add[1], add[2], add[3], add[4], VehicleType.valueOf(add[5].toUpperCase()), FuelType.valueOf(add[6].toUpperCase())));
@@ -63,7 +63,7 @@ public class Execute_script extends Command {
                                         System.out.println("Элемент добавлен");
                                         break;
                                     }
-                                    case "add_if_max": {
+                                    case "ADD_IF_MAX": {
                                         String[] add = for_check[1].split(" ");
                                         long maxVh = 0;
                                         for (Vehicle vehicle : vehicleList.vehicles) {
@@ -89,7 +89,7 @@ public class Execute_script extends Command {
                                         System.out.println("Элемент добавлен");
                                         break;
                                     }
-                                    case "update": {
+                                    case "UPDATE": {
                                         String[] add = for_check[1].split(" ");
                                         ZonedDateTime time = null;
                                         long id = Long.parseLong(add[0]);
@@ -116,7 +116,7 @@ public class Execute_script extends Command {
                                         System.out.println("Элемент обновлён");
                                         break;
                                     }
-                                    case "remove_greater": {
+                                    case "REMOVE_GREATER": {
                                         String[] add = for_check[1].split(" ");
                                         if (add.length == 7) {
                                             Vehicle remove_greater = new Vehicle(add[0], add[1], add[2], add[3], add[4], VehicleType.valueOf(add[5].toUpperCase()), FuelType.valueOf(add[6].toUpperCase()));
@@ -134,7 +134,7 @@ public class Execute_script extends Command {
                                         System.out.println("Элементы удалены");
                                         break;
                                     }
-                                    case "remove_lower":
+                                    case "REMOVE_LOWER":
                                         String[] add = for_check[1].split(" ");
                                         if (add.length == 7) {
                                             Vehicle remove_lower = new Vehicle(add[0], add[1], add[2], add[3], add[4], VehicleType.valueOf(add[5].toUpperCase()), FuelType.valueOf(add[6].toUpperCase()));
