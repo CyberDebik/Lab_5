@@ -195,12 +195,12 @@ public class Add extends Command {
         String[] strings = data.split(" ");
         String name = strings[0].trim();
         if (strings.length != 1) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else if (name.isEmpty()) {
-            System.out.println("Вы не ввели имя\n");
+            System.out.println("Вы не ввели имя");
         } else {
             vehicleList.vehicles.add(new Vehicle(name, setX(), setY(), setEnginePower(), setNumberOfWheels(), setVehicleType(), setFuelType()));
-            System.out.println("Элемент добавлен\n");
+            System.out.println("Элемент добавлен");
         }
     }
 }

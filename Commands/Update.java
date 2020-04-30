@@ -21,10 +21,10 @@ public class Update extends Command {
     public void execute(VehicleList vehicleList, String data) {
         String[] strings = data.split(" ");
         if (strings.length != 2) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             if (strings[0].trim().isEmpty() || Check.checkInt(strings[0].trim()) || strings[1].trim().isEmpty()) {
-                System.out.println("Команда введена неверно\n");
+                System.out.println("Команда введена неверно");
             } else {
                 ZonedDateTime time = null;
                 long id = Long.parseLong(strings[0].trim());
@@ -39,7 +39,7 @@ public class Update extends Command {
                     vehicleList.vehicles.add(new Vehicle(id, name, add.setX(), add.setY(), time, add.setEnginePower(), add.setNumberOfWheels(), add.setVehicleType(), add.setFuelType()));
                     System.out.println("Элемент обновлён");
                 } else {
-                    System.out.println("Элемента с таким id нет\n");
+                    System.out.println("Элемента с таким id нет");
                 }
             }
         }

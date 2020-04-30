@@ -18,12 +18,12 @@ public class Filter_greater_than_type extends Command {
         String type;
         String number;
         if (strings.length != 2) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             type = strings[0].trim();
             number = strings[1].trim();
             if (Check.checkFloat(number) || number.isEmpty()) {
-                System.out.println("Неправильный тип числа\n");
+                System.out.println("Неправильный тип числа");
             } else {
                 float more_than = Float.parseFloat(number);
                 switch (type) {
@@ -49,7 +49,7 @@ public class Filter_greater_than_type extends Command {
                         }
                         break;
                     default:
-                        System.out.println("Такого поля нет\n");
+                        System.out.println("Такого поля нет");
                 }
             }
         }

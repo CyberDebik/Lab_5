@@ -17,7 +17,7 @@ public class Group_counting_by_number_of_wheels extends Command {
     public void execute(VehicleList vehicleList, String data) {
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             for (Vehicle vehicle : vehicleList.vehicles) {
                 if (vehicle.getNumberOfWheels() % 2 == 0) {

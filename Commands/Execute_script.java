@@ -40,7 +40,7 @@ public class Execute_script extends Command {
                 System.out.println("Вы не ввели имя файла");
             } else {
                 try {
-                    file = new File("/home/s284260/Lab5/" + file_name);
+                    file = new File("D:\\Бу итмо\\Лабы\\Прога\\Lab5\\" + file_name);
                     if (file.exists()) {
                         Scanner reader = new Scanner(file);
                         Scanner scanner;

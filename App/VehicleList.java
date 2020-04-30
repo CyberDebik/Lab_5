@@ -68,7 +68,7 @@ public class VehicleList {
             Command command_execute = commandMap.get(command);
             command_execute.execute(this, data.toString());
         } else if (!command.equals("")) {
-            System.out.println("Такой комманды нет, для просмотра всех достуных комманд введите \"help\"\n");
+            System.out.println("Такой комманды нет, для просмотра всех достуных комманд введите \"help\"");
         }
     }
 }

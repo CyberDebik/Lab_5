@@ -184,13 +184,13 @@ public class Vehicle implements Comparable<Vehicle> {
      */
     @Override
     public String toString() {
-        return name + "\n|id: " + id + "\n" +
+        return "\n" + name + "\n|id: " + id + "\n" +
                 "|Coordinates: (" + coordinates.getX() + "; " + coordinates.getY() + ")\n" +
                 "|Creation date: " + getCreationDate() + "\n" +
                 "|Engine power: " + getEnginePower() + "\n" +
                 "|Number of wheels: " + getNumberOfWheels() + "\n" +
                 "|Vehicle type: " + getType() + "\n" +
-                "|Fuel type: " + getFuelType() + "\n";
+                "|Fuel type: " + getFuelType();
     }
 
     /**

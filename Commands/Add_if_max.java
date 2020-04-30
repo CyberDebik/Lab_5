@@ -20,13 +20,13 @@ public class Add_if_max extends Command {
         String[] strings = data.split(" ");
         String name = strings[0].trim();
         if (strings.length != 1) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else if (name.isEmpty()) {
-            System.out.println("Вы не ввели имя\n");
+            System.out.println("Вы не ввели имя");
         } else {
             Vehicle add_if_max = new Vehicle(name, add.setX(), add.setY(), add.setEnginePower(), add.setNumberOfWheels(), add.setVehicleType(), add.setFuelType());
             if (add_if_max.compareTo(Collections.max(vehicleList.vehicles)) <= 0 ) {
-                System.out.println("Элемент не максимальный\n");
+                System.out.println("Элемент не максимальный");
             } else {
                 vehicleList.vehicles.add(add_if_max);
                 System.out.println("Элемент добавлен");

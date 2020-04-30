@@ -31,6 +31,7 @@ public class App {
             System.out.print("Введите команду: ");
             command = scanner.nextLine();
             vehicleList.commandChoose(command);
+            System.out.println();
         }
     }
 }

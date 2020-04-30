@@ -19,7 +19,7 @@ public class Save extends Command {
         File file = new File(file_path);
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             try {
                 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
@@ -29,7 +29,7 @@ public class Save extends Command {
                 bufferedWriter.close();
                 System.out.println("Коллекция сохранена в файл " + file.getAbsolutePath());
             } catch (Exception e) {
-                System.out.println("Нельзя записать коллекцию в этот файл\n");
+                System.out.println("Нельзя записать коллекцию в этот файл");
             }
         }
     }

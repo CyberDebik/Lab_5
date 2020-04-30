@@ -14,7 +14,7 @@ public class Exit extends Command {
     public void execute(VehicleList vehicleList, String data) {
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             vehicleList.status = false;
         }

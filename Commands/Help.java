@@ -32,7 +32,7 @@ public class Help extends Command {
                             "remove_lower {element} : удалить из коллекции все элементы, меньшие, чем заданный\n" +
                             "group_counting_by_number_of_wheels : сгруппировать элементы коллекции по значению поля numberOfWheels, вывести количество элементов в каждой группе\n" +
                             "filter_greater_than_type {type} {number} : вывести элементы, значение поля type которых больше заданного\n" +
-                            "print_field_ascending_number_of_wheels : вывести значения поля numberOfWheels в порядке возрастания\n");
+                            "print_field_ascending_number_of_wheels : вывести значения поля numberOfWheels в порядке возрастания");
         }
     }
 }

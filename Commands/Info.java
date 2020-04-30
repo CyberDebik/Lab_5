@@ -16,7 +16,7 @@ public class Info extends Command {
     public void execute(VehicleList vehicleList, String data) /*throws IOException*/ {
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else {
             System.out.println("Тип коллекции - HashSet;\n" + vehicleList.vehicles.size() + " элементов в коллекции" + "\nInitialization Date: " + LocalDate.now());
         }

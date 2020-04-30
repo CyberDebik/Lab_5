@@ -15,16 +15,16 @@ public class Remove_by_id extends Command {
     public void execute(VehicleList vehicleList, String data) /*throws IOException*/ {
         String[] strings = data.split(" ");
         if (strings.length != 1) {
-            System.out.println("Команда введена неверно\n");
+            System.out.println("Команда введена неверно");
         } else if (strings[0].trim().isEmpty() || Check.checkInt(strings[0].trim())) {
-            System.out.println("Неправильный тип числа, повторите ввод\n");
+            System.out.println("Неправильный тип числа");
         } else {
             long id = Long.parseLong(strings[0].trim());
             if (vehicleList.vehicles.removeIf(vehicle -> id == vehicle.getID())) {
                 vehicleList.vehicles.removeIf(vehicle -> id == vehicle.getID());
-                System.out.println("Элемент удалён\n");
+                System.out.println("Элемент удалён");
             } else {
-                System.out.println("Элемента с таким id нет\n");
+                System.out.println("Элемента с таким id нет");
             }
         }
     }
