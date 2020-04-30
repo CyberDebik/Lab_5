@@ -1,5 +1,6 @@
 package Commands;
 
+import App.Check;
 import App.VehicleList;
 import Classes.Vehicle;
 import Enums.FuelType;
@@ -39,7 +40,7 @@ public class Execute_script extends Command {
                 System.out.println("Вы не ввели имя файла");
             } else {
                 try {
-                    file = new File("/home/s284260/Lab5/" + file_name);
+                    file = new File("D:\\Бу итмо\\Лабы\\Прога\\Lab5\\" + file_name);
                     if (file.exists()) {
                         Scanner reader = new Scanner(file);
                         Scanner scanner;
@@ -51,7 +52,7 @@ public class Execute_script extends Command {
                                 String[] stringsWithCommand = command.split(" ");
                                 switch (stringsWithCommand[0].toUpperCase()) {
                                     case "ADD": {
-                                        try {
+                                        if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && !Check.checkPositive(stringsWithCommand[4])) && (!Check.checkInt(stringsWithCommand[5]) && !Check.checkPositive(stringsWithCommand[5]))) {
                                             if (stringsWithCommand.length == 8) {
                                                 vehicleList.vehicles.add(new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase())));
                                                 System.out.println("Элемент добавлен");
@@ -59,13 +60,13 @@ public class Execute_script extends Command {
                                                 vehicleList.vehicles.add(new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], null, FuelType.valueOf(stringsWithCommand[6].toUpperCase())));
                                                 System.out.println("Элемент добавлен");
                                             }
-                                        } catch (Exception e) {
+                                        } else {
                                             System.out.println("Данные введены неверно");
                                         }
                                         break;
                                     }
                                     case "ADD_IF_MAX": {
-                                        try {
+                                        if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && !Check.checkPositive(stringsWithCommand[4])) && (!Check.checkInt(stringsWithCommand[5]) && !Check.checkPositive(stringsWithCommand[5]))) {
                                             long maxVh = 0;
                                             for (Vehicle vehicle : vehicleList.vehicles) {
                                                 if (maxVh < vehicle.getSize()) {
@@ -91,13 +92,13 @@ public class Execute_script extends Command {
                                                     System.out.println("Элемент добавлен");
                                                 }
                                             }
-                                        } catch (Exception e) {
+                                        } else {
                                             System.out.println("Данные введены неверно");
                                         }
                                         break;
                                     }
                                     case "UPDATE": {
-                                        try {
+                                        if ((!Check.checkFloat(stringsWithCommand[3]) && Check.checkMoreThan_minus_615(stringsWithCommand[3])) && !Check.checkFloat(stringsWithCommand[4]) && (!Check.checkInt(stringsWithCommand[5]) && !Check.checkPositive(stringsWithCommand[5])) && (!Check.checkInt(stringsWithCommand[6]) && !Check.checkPositive(stringsWithCommand[6]))) {
                                             ZonedDateTime time = null;
                                             long id = Long.parseLong(stringsWithCommand[1]);
                                             for (Vehicle vehicle : vehicleList.vehicles) {
@@ -122,13 +123,13 @@ public class Execute_script extends Command {
                                                     System.out.println("Элемента с таким id нет\n");
                                                 }
                                             }
-                                        } catch (Exception e) {
+                                        } else {
                                             System.out.println("Данные введены неверно");
                                         }
                                         break;
                                     }
                                     case "REMOVE_GREATER": {
-                                        try {
+                                        if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && !Check.checkPositive(stringsWithCommand[4])) && (!Check.checkInt(stringsWithCommand[5]) && !Check.checkPositive(stringsWithCommand[5]))) {
                                             if (stringsWithCommand.length == 8) {
                                                 Vehicle remove_greater = new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase()));
                                                 long maxVh = remove_greater.getSize();
@@ -152,13 +153,13 @@ public class Execute_script extends Command {
                                             } else {
                                                 System.out.println("Элементов больше этого нет");
                                             }
-                                        } catch (Exception e) {
+                                        } else {
                                             System.out.println("Данные введены неверно");
                                         }
                                         break;
                                     }
                                     case "REMOVE_LOWER":
-                                        try {
+                                        if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && !Check.checkPositive(stringsWithCommand[4])) && (!Check.checkInt(stringsWithCommand[5]) && !Check.checkPositive(stringsWithCommand[5]))) {
                                             if (stringsWithCommand.length == 8) {
                                                 Vehicle remove_greater = new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase()));
                                                 long maxVh = remove_greater.getSize();
@@ -182,7 +183,7 @@ public class Execute_script extends Command {
                                             } else {
                                                 System.out.println("Элементов меньше этого нет");
                                             }
-                                        } catch (Exception e) {
+                                        } else {
                                             System.out.println("Данные введены неверно");
                                         }
                                         break;
