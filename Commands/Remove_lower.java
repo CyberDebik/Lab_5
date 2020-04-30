@@ -8,6 +8,7 @@ import Classes.Vehicle;
  * Класс команды remove_greater
  */
 public class Remove_lower extends Command {
+
     private Add add = new Add();
 
     /**
