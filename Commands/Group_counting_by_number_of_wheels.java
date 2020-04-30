@@ -28,7 +28,6 @@ public class Group_counting_by_number_of_wheels extends Command {
             }
             System.out.println("Транспорт с четным количеством колёс: " + even);
             System.out.println("Транспорт с нечётным количеством колёс: " + odd);
-            System.out.println();
         }
     }
 }

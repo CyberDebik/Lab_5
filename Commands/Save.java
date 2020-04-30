@@ -28,7 +28,6 @@ public class Save extends Command {
                 }
                 bufferedWriter.close();
                 System.out.println("Коллекция сохранена в файл " + file.getAbsolutePath());
-                System.out.println();
             } catch (Exception e) {
                 System.out.println("Нельзя записать коллекцию в этот файл\n");
             }

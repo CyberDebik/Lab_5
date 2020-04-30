@@ -34,7 +34,6 @@ public class Remove_lower extends Command {
                 } else {
                     System.out.println("Элементов меньше заданного нет");
                 }
-                System.out.println();
             }
         }
     }

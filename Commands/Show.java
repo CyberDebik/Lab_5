@@ -20,7 +20,6 @@ public class Show extends Command {
             for (Vehicle vehicle : vehicleList.vehicles) {
                 System.out.println(vehicle);
             }
-            System.out.println();
         }
     }
 }

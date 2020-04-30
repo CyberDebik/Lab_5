@@ -27,7 +27,6 @@ public class Print_field_ascending_number_of_wheels extends Command {
             for (Vehicle vehicle : arrayList) {
                 System.out.println("У " + vehicle.getName() + " " + vehicle.getNumberOfWheels() + " колёс");
             }
-            System.out.println();
         }
     }
 }

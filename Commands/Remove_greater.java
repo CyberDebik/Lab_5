@@ -33,7 +33,6 @@ public class Remove_greater extends Command {
                 } else {
                     System.out.println("Элементов больше заданного нет");
                 }
-                System.out.println();
             }
         }
     }

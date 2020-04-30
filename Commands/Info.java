@@ -19,7 +19,6 @@ public class Info extends Command {
             System.out.println("Команда введена неверно\n");
         } else {
             System.out.println("Тип коллекции - HashSet;\n" + vehicleList.vehicles.size() + " элементов в коллекции" + "\nInitialization Date: " + LocalDate.now());
-            System.out.println();
         }
     }
 }

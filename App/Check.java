@@ -12,7 +12,7 @@ public class Check {
      * @return Возвращает true, если число типа int
      */
     public static boolean checkInt(String number) {
-        return !number.matches("-?\\d+(\\d+)?");
+        return !number.matches("-?\\d+");
     }
 
     /**
@@ -22,6 +22,11 @@ public class Check {
      * @return Возвращает true, если число типа float
      */
     public static boolean checkFloat(String number) {
-        return !number.matches("[-+]?[0-9]*\\.?[0-9]+");
+        return !number.matches("[-+]?\\d*\\.?\\d+");
     }
+
+    public static boolean checkPositive(String number) {
+        return !number.matches("\\d*\\.?\\d+");
+    }
+
 }
