@@ -50,8 +50,7 @@ public class Execute_script extends Command {
                             scanner = new Scanner(line);
                             while (scanner.hasNext()) {
                                 command = scanner.nextLine();
-                                command = Check.toCmd(command);
-                                String[] for_check = command.split("! ");
+                                String[] for_check = command.split(" ");
                                 switch (for_check[0].toUpperCase()) {
                                     case "ADD": {
                                         String[] add = for_check[1].split(" ");

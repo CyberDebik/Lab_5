@@ -6,23 +6,6 @@ package App;
 public class Check {
 
     /**
-     * Добавляем разделитель, чтобы отделить команду
-     *
-     * @param command команда
-     * @return Возвращает строку с разделителем
-     */
-    public static String toCmd(String command) {
-        command = command.trim();
-        String[] strings = command.split(" ");
-        StringBuilder out = new StringBuilder();
-        out.append(strings[0]).append("! ");
-        for (int i = 1; i < strings.length; i++) {
-            out.append(strings[i]).append(" ");
-        }
-        return out.toString();
-    }
-
-    /**
      * Проверяем, является ли строка числом типа int
      *
      * @param number число, которое надо проверить

@@ -30,7 +30,6 @@ public class App {
         while (vehicleList.status) {
             System.out.print("Введите команду: ");
             command = scanner.nextLine();
-            command = Check.toCmd(command);
             vehicleList.commandChoose(command);
         }
     }

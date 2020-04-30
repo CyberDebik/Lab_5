@@ -4,6 +4,7 @@ import Classes.Vehicle;
 import Commands.*;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -58,11 +59,15 @@ public class VehicleList {
      */
     public void commandChoose(String command) throws IOException {
         setCommands();
-        String[] strings = command.split("!");
+        String[] strings = command.split(" ");
         command = strings[0].trim().toUpperCase();
+        StringBuilder data = new StringBuilder();
+        for (int i = 1; i < strings.length; i++) {
+            data.append(strings[i]).append(" ");
+        }
         if (commandMap.get(command) != null) {
             Command command_execute = commandMap.get(command);
-            command_execute.execute(this, strings[1].trim());
+            command_execute.execute(this, data.toString());
         } else if (!command.equals("")) {
             System.out.println("Такой комманды нет, для просмотра всех достуных комманд введите \"help\"\n");
         }
