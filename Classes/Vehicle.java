@@ -56,7 +56,7 @@ public class Vehicle implements Comparable<Vehicle> {
     public Vehicle(String name, String x, String y, String enginePower, String numberOfWheels, VehicleType type, FuelType fuelType) {
         id = (long) hashCode();
         this.name = name;
-        this.coordinates = new Coordinates(Float.parseFloat(x), Float.parseFloat(y));
+        this.coordinates = new Coordinates(x, y);
         creationDate = java.time.ZonedDateTime.now();
         this.enginePower = Integer.parseInt(enginePower);
         this.numberOfWheels = Long.parseLong(numberOfWheels);
@@ -67,7 +67,7 @@ public class Vehicle implements Comparable<Vehicle> {
     public Vehicle(String name, String x, String y, ZonedDateTime creationDate, String enginePower, String numberOfWheels, VehicleType type, FuelType fuelType) {
         id = (long) hashCode();
         this.name = name;
-        this.coordinates = new Coordinates(Float.parseFloat(x), Float.parseFloat(y));
+        this.coordinates = new Coordinates(x, y);
         this.creationDate = creationDate;
         this.enginePower = Integer.parseInt(enginePower);
         this.numberOfWheels = Long.parseLong(numberOfWheels);
@@ -78,7 +78,7 @@ public class Vehicle implements Comparable<Vehicle> {
     public Vehicle(Long id, String name, String x, String y, ZonedDateTime creationDate, String enginePower, String numberOfWheels, VehicleType type, FuelType fuelType) {
         this.id = id;
         this.name = name;
-        this.coordinates = new Coordinates(Float.parseFloat(x), Float.parseFloat(y));
+        this.coordinates = new Coordinates(x, y);
         this.creationDate = creationDate;
         this.enginePower = Integer.parseInt(enginePower);
         this.numberOfWheels = Long.parseLong(numberOfWheels);
@@ -89,7 +89,7 @@ public class Vehicle implements Comparable<Vehicle> {
     public Vehicle(Long id, String name, String x, String y, String enginePower, String numberOfWheels, VehicleType type, FuelType fuelType) {
         this.id = id;
         this.name = name;
-        this.coordinates = new Coordinates(Float.parseFloat(x), Float.parseFloat(y));
+        this.coordinates = new Coordinates(x, y);
         this.enginePower = Integer.parseInt(enginePower);
         this.numberOfWheels = Long.parseLong(numberOfWheels);
         this.type = type;

@@ -21,9 +21,9 @@ public class Coordinates {
      * @param x координата
      * @param y координата
      */
-    public Coordinates(float x, Float y) {
-        this.x = x;
-        this.y = y;
+    public Coordinates(String x, String y) {
+        this.x = Float.parseFloat(x);
+        this.y = Float.parseFloat(y);
     }
 
     /**
