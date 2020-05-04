@@ -11,20 +11,20 @@ public class App {
     /**
      * Название комманды
      */
-    String command;
-    Scanner scanner = new Scanner(System.in);
+    private static String command;
+    private static Scanner scanner = new Scanner(System.in);
 
     /**
      * Объект хранящий коллекцию vehicles
      */
-    VehicleList vehicleList = new VehicleList();
+    private static VehicleList vehicleList = new VehicleList();
 
     /**
      * Метод для запуска программы
      *
      * @throws IOException если что-то пойдет не так
      */
-    public void start() throws IOException {
+    public static void start() throws IOException {
         CSV.read(vehicleList);
         while (true) {
             System.out.print("Введите команду: ");
