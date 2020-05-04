@@ -18,7 +18,6 @@ public class Check {
         } catch (Exception e) {
             return true;
         }
-//        return !number.matches("-?\\d+");
     }
 
     /**
@@ -34,7 +33,6 @@ public class Check {
         } catch (Exception e) {
             return true;
         }
-//        return !number.matches("[-+]?\\d*\\.?\\d+");
     }
 
     /**

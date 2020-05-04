@@ -17,7 +17,6 @@ public class Exit extends Command {
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");
         } else {
-//            App.turn_off();
             System.exit(0);
         }
     }
