@@ -12,7 +12,13 @@ public class Check {
      * @return Возвращает false, если число типа int
      */
     public static boolean checkInt(String number) {
-        return !number.matches("-?\\d+");
+        try {
+            Integer.parseInt(number);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+//        return !number.matches("-?\\d+");
     }
 
     /**
@@ -22,7 +28,28 @@ public class Check {
      * @return Возвращает false, если число типа float
      */
     public static boolean checkFloat(String number) {
-        return !number.matches("[-+]?\\d*\\.?\\d+");
+        try {
+            Float.parseFloat(number);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+//        return !number.matches("[-+]?\\d*\\.?\\d+");
+    }
+
+    /**
+     * Проверяем, является ли число типа long
+     *
+     * @param number число, которое надо проверить
+     * @return Возвращает false, если число типа long
+     */
+    public static boolean checkLong(String number) {
+        try {
+            Long.parseLong(number);
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
 
     /**
@@ -53,5 +80,4 @@ public class Check {
             return false;
         }
     }
-
 }

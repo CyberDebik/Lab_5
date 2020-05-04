@@ -23,7 +23,7 @@ public class Update extends Command {
         if (strings.length != 2) {
             System.out.println("Команда введена неверно");
         } else {
-            if (strings[0].trim().isEmpty() || Check.checkInt(strings[0].trim()) || strings[1].trim().isEmpty()) {
+            if (strings[0].trim().isEmpty() || Check.checkLong(strings[0].trim()) || strings[1].trim().isEmpty()) {
                 System.out.println("Команда введена неверно");
             } else {
                 ZonedDateTime time = null;

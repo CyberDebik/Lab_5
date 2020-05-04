@@ -89,7 +89,7 @@ public class Add extends Command {
                 System.out.print(">");
                 wheels = scanner.nextLine().trim();
             }
-            while (Check.checkInt(wheels)) {
+            while (Check.checkLong(wheels)) {
                 System.out.println("Неправильный тип числа, повторите ввод: ");
                 System.out.print(">");
                 wheels = scanner.nextLine().trim();
