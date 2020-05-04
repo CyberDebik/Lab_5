@@ -3,20 +3,21 @@ package Commands;
 import App.VehicleList;
 import Classes.Vehicle;
 
+import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 
 /**
  * Класс команды add_if_max
  */
 public class Add_if_max extends Command {
 
-    private Add add = new Add();
-
     /**
      * Метод выполнения команды
      */
     @Override
     public void execute(VehicleList vehicleList, String data) {
+        Add add = new Add();
         String[] strings = data.split(" ");
         String name = strings[0].trim();
         if (strings.length != 1) {

@@ -16,16 +16,6 @@ import java.util.Scanner;
 public class Execute_script extends Command {
 
     /**
-     * Поле названия команды
-     */
-    String command;
-
-    /**
-     * Файл со скриптом
-     */
-    File file;
-
-    /**
      * Метод выполнения команды
      */
     @Override
@@ -33,22 +23,21 @@ public class Execute_script extends Command {
         try {
             String[] strings = data.split(" ");
             String file_name = strings[0].trim();
-            String line;
             if (strings.length != 1) {
                 System.out.println("Команда введена неверно");
             } else if (file_name.isEmpty()) {
                 System.out.println("Вы не ввели имя файла");
             } else {
                 try {
-                    file = new File("/home/s284260/Lab5/" + file_name);
+                    File file = new File("/home/s284260/Lab5/" + file_name);
                     if (file.exists()) {
                         Scanner reader = new Scanner(file);
                         Scanner scanner;
                         while (reader.hasNextLine()) {
-                            line = reader.nextLine();
+                            String line = reader.nextLine();
                             scanner = new Scanner(line);
                             while (scanner.hasNext()) {
-                                command = scanner.nextLine();
+                                String command = scanner.nextLine();
                                 String[] stringsWithCommand = command.split(" ");
                                 switch (stringsWithCommand[0].toUpperCase()) {
                                     case "ADD": {

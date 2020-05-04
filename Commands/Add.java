@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Add extends Command {
 
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     /**
      * Метод для установки координаты "x"

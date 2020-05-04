@@ -7,14 +7,14 @@ import Classes.Vehicle;
  * Класс команды group_counting_by_number_of_wheels
  */
 public class Group_counting_by_number_of_wheels extends Command {
-    int even = 0;
-    int odd = 0;
 
     /**
      * Метод выполнения команды
      */
     @Override
     public void execute(VehicleList vehicleList, String data) {
+        int even = 0;
+        int odd = 0;
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");

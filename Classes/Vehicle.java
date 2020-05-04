@@ -204,6 +204,12 @@ public class Vehicle implements Comparable<Vehicle> {
 
     @Override
     public int compareTo(Vehicle anotherVehicle) {
-        return Long.compare(getSize(), anotherVehicle.getSize());
+        if (getSize() > anotherVehicle.getSize()) {
+            return 1;
+        } else if (getSize() == anotherVehicle.getSize()) {
+            return 0;
+        } else {
+            return -1;
+        }
     }
 }
