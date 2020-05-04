@@ -9,26 +9,16 @@ import java.util.Scanner;
 public class App {
 
     /**
-     * Название комманды
-     */
-    private static String command;
-    private static Scanner scanner = new Scanner(System.in);
-
-    /**
-     * Объект хранящий коллекцию vehicles
-     */
-    private static VehicleList vehicleList = new VehicleList();
-
-    /**
      * Метод для запуска программы
      *
      * @throws IOException если что-то пойдет не так
      */
     public static void start() throws IOException {
+        VehicleList vehicleList = new VehicleList();
         CSV.read(vehicleList);
         while (true) {
             System.out.print("Введите команду: ");
-            command = scanner.nextLine();
+            String command = new Scanner(System.in).nextLine();
             vehicleList.commandChoose(command);
             System.out.println();
         }

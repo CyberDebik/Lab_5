@@ -13,20 +13,18 @@ import java.util.HashSet;
 public class VehicleList {
 
     /**
-     * Коллекция с командами
-     */
-    public HashMap<String, Command> commandMap = new HashMap<>();
-
-    /**
      * Коллекция, содержащая объекты Vehicle
      */
     public HashSet<Vehicle> vehicles = new HashSet<>();
 
-
     /**
-     * Метод, добавляющий камманды в коллекцию
+     * Метод для проверки и выполнения введённой команды
+     *
+     * @param command команда
+     * @throws IOException если что-то пойдет не так
      */
-    private void setCommands() {
+    public void commandChoose(String command) throws IOException {
+        HashMap<String, Command> commandMap = new HashMap<>();
         commandMap.put("HELP", new Help());
         commandMap.put("INFO", new Info());
         commandMap.put("SHOW", new Show());
@@ -43,16 +41,6 @@ public class VehicleList {
         commandMap.put("PRINT_FIELD_ASCENDING_NUMBER_OF_WHEELS", new Print_field_ascending_number_of_wheels());
         commandMap.put("SAVE", new Save());
         commandMap.put("EXECUTE_SCRIPT", new Execute_script());
-    }
-
-    /**
-     * Метод для проверки и выполнения введённой команды
-     *
-     * @param command команда
-     * @throws IOException если что-то пойдет не так
-     */
-    public void commandChoose(String command) throws IOException {
-        setCommands();
         String[] strings = command.split(" ");
         command = strings[0].trim().toUpperCase();
         StringBuilder data = new StringBuilder();
