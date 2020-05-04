@@ -19,7 +19,6 @@ public class App {
      */
     VehicleList vehicleList = new VehicleList();
 
-
     /**
      * Метод для запуска программы
      *
@@ -27,7 +26,7 @@ public class App {
      */
     public void start() throws IOException {
         CSV.read(vehicleList);
-        while (vehicleList.status) {
+        while (true) {
             System.out.print("Введите команду: ");
             command = scanner.nextLine();
             vehicleList.commandChoose(command);

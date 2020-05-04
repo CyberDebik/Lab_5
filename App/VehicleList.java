@@ -13,11 +13,6 @@ import java.util.HashSet;
 public class VehicleList {
 
     /**
-     * Поле работы программы
-     */
-    public boolean status = true;
-
-    /**
      * Коллекция с командами
      */
     public HashMap<String, Command> commandMap = new HashMap<>();

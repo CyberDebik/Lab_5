@@ -1,5 +1,6 @@
 package Commands;
 
+import App.App;
 import App.VehicleList;
 
 /**
@@ -16,7 +17,8 @@ public class Exit extends Command {
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");
         } else {
-            vehicleList.status = false;
+//            App.turn_off();
+            System.exit(0);
         }
     }
 }
