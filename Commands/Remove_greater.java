@@ -24,9 +24,9 @@ public class Remove_greater extends Command {
                 System.out.println("Вы не ввели имя");
             } else {
                 Vehicle remove_greater = new Vehicle(name, add.setX(), add.setY(), add.setEnginePower(), add.setNumberOfWheels(), add.setVehicleType(), add.setFuelType());
-                long maxVh = remove_greater.getSize();
+                long minVh = remove_greater.getSize();
                 long collection_size = vehicleList.vehicles.size();
-                vehicleList.vehicles.removeIf(vehicle -> vehicle.getSize() > maxVh);
+                vehicleList.vehicles.removeIf(vehicle -> vehicle.getSize() > minVh);
                 if (vehicleList.vehicles.size() < collection_size) {
                     System.out.println("Элементы удалены");
                     vehicleList.vehicles.add(remove_greater);
