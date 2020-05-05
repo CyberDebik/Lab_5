@@ -57,7 +57,7 @@ public class Check {
      * @return Возвращает false, если число положительное
      */
     public static boolean checkPositive(String number) {
-        return !number.matches("\\d*\\.?\\d+");
+        return number.matches("\\d*\\.?\\d+");
     }
 
     /**

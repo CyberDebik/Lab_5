@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Add extends Command {
 
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     /**
      * Метод для установки координаты "x"
@@ -23,18 +23,7 @@ public class Add extends Command {
         System.out.println("Введите координату X");
         System.out.print(">");
         String x = scanner.nextLine().trim();
-        boolean checking = false;
-        while (!checking) {
-            try {
-                Float.parseFloat(x);
-                checking = true;
-            } catch (Exception e) {
-                System.out.println("Неправильный тип числа, повторите ввод: ");
-                System.out.print(">");
-                x = scanner.nextLine().trim();
-            }
-        }
-        while (Check.checkFloat(x) || (Float.parseFloat(x) < -615)) {
+        while (Check.checkFloat(x) && Check.checkMoreThan_minus_615(x)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             x = scanner.nextLine().trim();
@@ -51,17 +40,6 @@ public class Add extends Command {
         System.out.println("Введите координату Y");
         System.out.print(">");
         String y = scanner.nextLine().trim();
-        boolean checking = false;
-        while (!checking) {
-            try {
-                Float.parseFloat(y);
-                checking = true;
-            } catch (Exception e) {
-                System.out.println("Неправильный тип числа, повторите ввод: ");
-                System.out.print(">");
-                y = scanner.nextLine().trim();
-            }
-        }
         while (Check.checkFloat(y)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");

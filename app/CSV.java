@@ -55,13 +55,13 @@ public class CSV {
                             System.out.println(name + " -> Неправильный формат времени");
                         }
                     } else if (index == 4) {
-                        if (!Check.checkInt(info_from_file) && !Check.checkPositive(info_from_file)) {
+                        if (!Check.checkInt(info_from_file) && Check.checkPositive(info_from_file)) {
                             enginePower = info_from_file;
                         } else {
                             System.out.println(name + " -> Мощность двигателя введена неверно");
                         }
                     } else if (index == 5) {
-                        if (!Check.checkLong(info_from_file) && !Check.checkPositive(info_from_file)) {
+                        if (!Check.checkLong(info_from_file) && Check.checkPositive(info_from_file)) {
                             numberOfWheels = info_from_file;
                         } else {
                             System.out.println(name + " -> Количество колёс введено неверно");

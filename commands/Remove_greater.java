@@ -8,13 +8,12 @@ import classes.Vehicle;
  */
 public class Remove_greater extends Command {
 
-    private Add add = new Add();
-
     /**
      * Метод выполнения команды
      */
     @Override
     public void execute(VehicleList vehicleList, String data) {
+        Add add = new Add();
         String[] strings = data.split(" ");
         if (strings.length != 1) {
             System.out.println("Команда введена неверно");
