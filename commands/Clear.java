@@ -1,12 +1,11 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
-import Classes.Vehicle;
+import app.VehicleList;
 
 /**
- * Класс команды show
+ * Класс команды clear
  */
-public class Show extends Command {
+public class Clear extends Command {
 
     /**
      * Метод выполнения команды
@@ -16,10 +15,11 @@ public class Show extends Command {
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");
+        } else if (!vehicleList.vehicles.isEmpty()) {
+            vehicleList.vehicles.clear();
+            System.out.println("Коллекция очищена");
         } else {
-            for (Vehicle vehicle : vehicleList.vehicles) {
-                System.out.println(vehicle);
-            }
+            System.out.println("Коллекция пуста");
         }
     }
 }

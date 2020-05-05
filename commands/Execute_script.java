@@ -1,10 +1,10 @@
-package Commands;
+package commands;
 
-import App.Check;
-import App.VehicleList;
-import Classes.Vehicle;
-import Enums.FuelType;
-import Enums.VehicleType;
+import app.Check;
+import app.VehicleList;
+import classes.Vehicle;
+import enums.FuelType;
+import enums.VehicleType;
 
 import java.io.File;
 import java.time.ZonedDateTime;

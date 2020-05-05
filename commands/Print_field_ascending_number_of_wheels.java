@@ -1,8 +1,8 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
-import Classes.Vehicle;
-import Classes.NumberOfWheelsComparator;
+import app.VehicleList;
+import classes.Vehicle;
+import classes.NumberOfWheelsComparator;
 
 import java.util.ArrayList;
 

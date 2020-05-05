@@ -1,6 +1,7 @@
-import App.*;
+import app.*;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Класс Main
@@ -8,6 +9,13 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        App.start();
+        VehicleList vehicleList = new VehicleList();
+        CSV.read(vehicleList);
+        while (true) {
+            System.out.print("Введите команду: ");
+            String command = new Scanner(System.in).nextLine();
+            vehicleList.commandChoose(command);
+            System.out.println();
+        }
     }
 }

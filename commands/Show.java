@@ -1,11 +1,12 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
+import app.VehicleList;
+import classes.Vehicle;
 
 /**
- * Класс команды exit
+ * Класс команды show
  */
-public class Exit extends Command {
+public class Show extends Command {
 
     /**
      * Метод выполнения команды
@@ -16,7 +17,9 @@ public class Exit extends Command {
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");
         } else {
-            System.exit(0);
+            for (Vehicle vehicle : vehicleList.vehicles) {
+                System.out.println(vehicle);
+            }
         }
     }
 }

@@ -1,8 +1,8 @@
-package Commands;
+package commands;
 
-import App.Check;
-import App.VehicleList;
-import Classes.Vehicle;
+import app.Check;
+import app.VehicleList;
+import classes.Vehicle;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;

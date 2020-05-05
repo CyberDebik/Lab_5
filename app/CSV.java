@@ -1,8 +1,8 @@
-package App;
+package app;
 
-import Classes.Vehicle;
-import Enums.FuelType;
-import Enums.VehicleType;
+import classes.Vehicle;
+import enums.FuelType;
+import enums.VehicleType;
 
 import java.io.File;
 import java.time.ZonedDateTime;

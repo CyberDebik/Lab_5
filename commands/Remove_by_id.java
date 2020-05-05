@@ -1,7 +1,7 @@
-package Commands;
+package commands;
 
-import App.Check;
-import App.VehicleList;
+import app.Check;
+import app.VehicleList;
 
 /**
  * Класс команды remove_by_id

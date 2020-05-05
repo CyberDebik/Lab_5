@@ -1,7 +1,7 @@
-package App;
+package app;
 
-import Classes.Vehicle;
-import Commands.*;
+import classes.Vehicle;
+import commands.*;
 
 import java.io.IOException;
 import java.util.HashMap;

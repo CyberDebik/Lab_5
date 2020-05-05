@@ -1,9 +1,9 @@
-package Commands;
+package commands;
 
-import App.Check;
-import App.VehicleList;
-import Classes.Vehicle;
-import Enums.*;
+import app.Check;
+import app.VehicleList;
+import classes.Vehicle;
+import enums.*;
 
 import java.util.Scanner;
 

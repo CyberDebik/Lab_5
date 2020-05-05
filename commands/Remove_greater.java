@@ -1,7 +1,7 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
-import Classes.Vehicle;
+import app.VehicleList;
+import classes.Vehicle;
 
 /**
  * Класс команды remove_greater

@@ -1,11 +1,9 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
-import Classes.Vehicle;
+import app.VehicleList;
+import classes.Vehicle;
 
-import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 
 /**
  * Класс команды add_if_max

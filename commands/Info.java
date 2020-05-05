@@ -1,6 +1,6 @@
-package Commands;
+package commands;
 
-import App.VehicleList;
+import app.VehicleList;
 
 import java.time.LocalDate;
 
