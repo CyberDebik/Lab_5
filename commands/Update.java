@@ -12,13 +12,12 @@ import java.util.Objects;
  */
 public class Update extends Command {
 
-    Add add = new Add();
-
     /**
      * Метод выполнения команды
      */
     @Override
     public void execute(VehicleList vehicleList, String data) {
+        Add add = new Add();
         String[] strings = data.split(" ");
         if (strings.length != 2) {
             System.out.println("Команда введена неверно");

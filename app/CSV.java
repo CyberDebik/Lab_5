@@ -85,7 +85,7 @@ public class CSV {
                 try {
                     vehicleList.vehicles.add(new Vehicle(name, x, y, date, enginePower, numberOfWheels, type, fuelType));
                 } catch (Exception e) {
-                    System.out.println("|>Данные введены неверно, элемент " + name + " не добавлен");
+                    System.out.println("|> Данные введены неверно, элемент " + name + " не добавлен");
                 }
                 index = 0;
             }

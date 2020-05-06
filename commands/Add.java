@@ -3,7 +3,8 @@ package commands;
 import app.Check;
 import app.VehicleList;
 import classes.Vehicle;
-import enums.*;
+import enums.FuelType;
+import enums.VehicleType;
 
 import java.util.Scanner;
 

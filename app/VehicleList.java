@@ -4,6 +4,7 @@ import classes.Vehicle;
 import commands.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -12,6 +13,10 @@ import java.util.HashSet;
  */
 public class VehicleList {
 
+    /**
+     * Время инициилизации коллекции
+     */
+    public final LocalDate localDate = LocalDate.now();
     /**
      * Коллекция, содержащая объекты Vehicle
      */

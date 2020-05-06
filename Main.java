@@ -1,4 +1,5 @@
-import app.*;
+import app.CSV;
+import app.VehicleList;
 
 import java.io.IOException;
 import java.util.Scanner;

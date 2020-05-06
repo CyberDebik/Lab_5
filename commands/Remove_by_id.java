@@ -12,7 +12,7 @@ public class Remove_by_id extends Command {
      * Метод выполнения команды
      */
     @Override
-    public void execute(VehicleList vehicleList, String data) /*throws IOException*/ {
+    public void execute(VehicleList vehicleList, String data) {
         String[] strings = data.split(" ");
         if (strings.length != 1) {
             System.out.println("Команда введена неверно");
