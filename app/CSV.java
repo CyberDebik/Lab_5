@@ -37,13 +37,13 @@ public class CSV {
                     if (index == 0) {
                         name = info_from_file;
                     } else if (index == 1) {
-                        if (!Check.checkFloat(info_from_file) && Check.checkMoreThan_minus_615(info_from_file)) {
+                        if (Check.checkFloat(info_from_file) && Check.checkMoreThan_minus_615(info_from_file)) {
                             x = info_from_file;
                         } else {
                             System.out.println(name + " -> Координата X введена неверно");
                         }
                     } else if (index == 2) {
-                        if (!Check.checkFloat(info_from_file)) {
+                        if (Check.checkFloat(info_from_file)) {
                             y = info_from_file;
                         } else {
                             System.out.println(name + " -> Координата Y введена неверно");
@@ -55,13 +55,13 @@ public class CSV {
                             System.out.println(name + " -> Неправильный формат времени");
                         }
                     } else if (index == 4) {
-                        if (!Check.checkInt(info_from_file) && Check.checkPositive(info_from_file)) {
+                        if (Check.checkInt(info_from_file) && Check.checkPositive(info_from_file)) {
                             enginePower = info_from_file;
                         } else {
                             System.out.println(name + " -> Мощность двигателя введена неверно");
                         }
                     } else if (index == 5) {
-                        if (!Check.checkLong(info_from_file) && Check.checkPositive(info_from_file)) {
+                        if (Check.checkLong(info_from_file) && Check.checkPositive(info_from_file)) {
                             numberOfWheels = info_from_file;
                         } else {
                             System.out.println(name + " -> Количество колёс введено неверно");
@@ -75,7 +75,7 @@ public class CSV {
                             System.out.println(name + " -> Тип транспорта введён неверно");
                     } else if (index == 7) {
                         try {
-                            fuelType = FuelType.valueOf(info_from_file);
+                            fuelType = FuelType.valueOf(info_from_file.toUpperCase());
                         } catch (Exception e) {
                             System.out.println(name + " -> Тип топлива введён неверно");
                         }

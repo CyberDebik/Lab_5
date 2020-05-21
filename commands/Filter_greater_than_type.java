@@ -15,14 +15,14 @@ public class Filter_greater_than_type extends Command {
     @Override
     public void execute(VehicleList vehicleList, String data) {
         String[] strings = data.split(" ");
-        String type;
-        String number;
+        String type = strings[0].trim();
+        String number = strings[1].trim();
         if (strings.length != 2) {
             System.out.println("Команда введена неверно");
+        } else if (type.matches("-?[0-9]*\\.?[0-9]+") && !number.matches("-?[0-9]*\\.?[0-9]+")) {
+            System.out.println("Команда введена неверно");
         } else {
-            type = strings[0].trim();
-            number = strings[1].trim();
-            if (Check.checkFloat(number) || number.isEmpty()) {
+            if (!Check.checkFloat(number)) {
                 System.out.println("Неправильный тип числа");
             } else {
                 float more_than = Float.parseFloat(number);

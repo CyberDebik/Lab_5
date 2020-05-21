@@ -48,13 +48,13 @@ public class VehicleList {
         commandMap.put("EXECUTE_SCRIPT", new Execute_script());
         String[] strings = command.split(" ");
         command = strings[0].trim().toUpperCase();
-        StringBuilder data = new StringBuilder();
+        String data = "";
         for (int i = 1; i < strings.length; i++) {
-            data.append(strings[i]).append(" ");
+            data += strings[i] + " ";
         }
         if (commandMap.get(command) != null) {
             Command command_execute = commandMap.get(command);
-            command_execute.execute(this, data.toString());
+            command_execute.execute(this, data);
         } else if (!command.equals("")) {
             System.out.println("Такой комманды нет, для просмотра всех достуных комманд введите \"help\"");
         }

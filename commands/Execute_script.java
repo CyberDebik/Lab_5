@@ -42,7 +42,7 @@ public class Execute_script extends Command {
                                 switch (stringsWithCommand[0].toUpperCase()) {
                                     case "ADD": {
                                         try {
-                                            if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4])) && (!Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5]))) {
+                                            if (Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2]) && Check.checkFloat(stringsWithCommand[3]) && Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4]) && Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5])) {
                                                 if (stringsWithCommand.length == 8) {
                                                     vehicleList.vehicles.add(new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase())));
                                                     System.out.println("Элемент добавлен");
@@ -60,7 +60,7 @@ public class Execute_script extends Command {
                                     }
                                     case "ADD_IF_MAX": {
                                         try {
-                                            if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4])) && (!Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5]))) {
+                                            if (Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2]) && Check.checkFloat(stringsWithCommand[3]) && Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4]) && Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5])) {
                                                 long maxVh = 0;
                                                 for (Vehicle vehicle : vehicleList.vehicles) {
                                                     if (maxVh < vehicle.getSize()) {
@@ -96,7 +96,7 @@ public class Execute_script extends Command {
                                     }
                                     case "UPDATE": {
                                         try {
-                                            if ((!Check.checkFloat(stringsWithCommand[3]) && Check.checkMoreThan_minus_615(stringsWithCommand[3])) && !Check.checkFloat(stringsWithCommand[4]) && (!Check.checkInt(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5])) && (!Check.checkLong(stringsWithCommand[6]) && Check.checkPositive(stringsWithCommand[6]))) {
+                                            if (Check.checkFloat(stringsWithCommand[3]) && Check.checkMoreThan_minus_615(stringsWithCommand[3]) && Check.checkFloat(stringsWithCommand[4]) && Check.checkInt(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5]) && Check.checkLong(stringsWithCommand[6]) && Check.checkPositive(stringsWithCommand[6])) {
                                                 ZonedDateTime time = null;
                                                 long id = Long.parseLong(stringsWithCommand[1]);
                                                 for (Vehicle vehicle : vehicleList.vehicles) {
@@ -131,7 +131,7 @@ public class Execute_script extends Command {
                                     }
                                     case "REMOVE_GREATER": {
                                         try {
-                                            if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4])) && (!Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5]))) {
+                                            if (Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2]) && Check.checkFloat(stringsWithCommand[3]) && Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4]) && Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5])) {
                                                 if (stringsWithCommand.length == 8) {
                                                     Vehicle remove_greater = new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase()));
                                                     long maxVh = remove_greater.getSize();
@@ -165,7 +165,7 @@ public class Execute_script extends Command {
                                     }
                                     case "REMOVE_LOWER":
                                         try {
-                                            if ((!Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2])) && !Check.checkFloat(stringsWithCommand[3]) && (!Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4])) && (!Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5]))) {
+                                            if (Check.checkFloat(stringsWithCommand[2]) && Check.checkMoreThan_minus_615(stringsWithCommand[2]) && !Check.checkFloat(stringsWithCommand[3]) && Check.checkInt(stringsWithCommand[4]) && Check.checkPositive(stringsWithCommand[4]) && Check.checkLong(stringsWithCommand[5]) && Check.checkPositive(stringsWithCommand[5])) {
                                                 if (stringsWithCommand.length == 8) {
                                                     Vehicle remove_greater = new Vehicle(stringsWithCommand[1], stringsWithCommand[2], stringsWithCommand[3], stringsWithCommand[4], stringsWithCommand[5], VehicleType.valueOf(stringsWithCommand[6].toUpperCase()), FuelType.valueOf(stringsWithCommand[7].toUpperCase()));
                                                     long maxVh = remove_greater.getSize();

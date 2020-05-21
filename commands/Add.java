@@ -24,7 +24,7 @@ public class Add extends Command {
         System.out.println("Введите координату X");
         System.out.print(">");
         String x = scanner.nextLine().trim();
-        while (Check.checkFloat(x) && Check.checkMoreThan_minus_615(x)) {
+        while (!(Check.checkFloat(x) && Check.checkMoreThan_minus_615(x))) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             x = scanner.nextLine().trim();
@@ -41,7 +41,7 @@ public class Add extends Command {
         System.out.println("Введите координату Y");
         System.out.print(">");
         String y = scanner.nextLine().trim();
-        while (Check.checkFloat(y)) {
+        while (!Check.checkFloat(y)) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             y = scanner.nextLine().trim();
@@ -58,21 +58,10 @@ public class Add extends Command {
         System.out.println("Введите количество колёс");
         System.out.print(">");
         String wheels = scanner.nextLine().trim();
-        boolean checking = false;
-        while (!checking) {
-            try {
-                Long.parseLong(wheels);
-                checking = true;
-            } catch (Exception e) {
-                System.out.println("Неправильный тип числа, повторите ввод: ");
-                System.out.print(">");
-                wheels = scanner.nextLine().trim();
-            }
-            while (Check.checkLong(wheels)) {
-                System.out.println("Неправильный тип числа, повторите ввод: ");
-                System.out.print(">");
-                wheels = scanner.nextLine().trim();
-            }
+        while (!Check.checkLong(wheels)) {
+            System.out.println("Неправильный тип числа, повторите ввод: ");
+            System.out.print(">");
+            wheels = scanner.nextLine().trim();
         }
         return wheels;
     }
@@ -86,18 +75,7 @@ public class Add extends Command {
         System.out.println("Введите мощность ");
         System.out.print(">");
         String enginePower = scanner.nextLine().trim();
-        boolean checking = false;
-        while (!checking) {
-            try {
-                Integer.parseInt(enginePower);
-                checking = true;
-            } catch (Exception e) {
-                System.out.println("Неправильный тип числа, повторите ввод: ");
-                System.out.print(">");
-                enginePower = scanner.nextLine().trim();
-            }
-        }
-        while (Check.checkInt(enginePower) || (Integer.parseInt(enginePower) <= 0)) {
+        while (!(Check.checkInt(enginePower) && Check.checkPositive(enginePower))) {
             System.out.println("Неправильный тип числа, повторите ввод: ");
             System.out.print(">");
             enginePower = scanner.nextLine().trim();
