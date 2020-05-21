@@ -68,12 +68,7 @@ public class Check {
      */
     public static boolean checkMoreThan_minus_615(String number) {
         try {
-            boolean check = false;
-            float num = Float.parseFloat(number);
-            if (num > -615) {
-                check = true;
-            }
-            return check;
+            return Float.parseFloat(number) > -615;
         } catch (Exception e) {
             return false;
         }
