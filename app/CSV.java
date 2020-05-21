@@ -23,7 +23,7 @@ public class CSV {
             String name = null;
             String x = null;
             String y = null;
-            ZonedDateTime date = null;
+            ZonedDateTime date = ZonedDateTime.now();
             String enginePower = null;
             String numberOfWheels = null;
             VehicleType type = null;
