@@ -17,14 +17,13 @@ public class Save extends Command {
      */
     @Override
     public void execute(VehicleList vehicleList, String data) {
-        String file_path = System.getenv().get("COLLECTION");
-        File file = new File(file_path);
+        File file = new File(System.getenv("COLLECTION"));
         String[] strings = data.split(" ");
         if (!strings[0].isEmpty()) {
             System.out.println("Команда введена неверно");
         } else {
             try {
-                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
+                BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
                 for (Vehicle vehicle : vehicleList.vehicles) {
                     bufferedWriter.write(vehicle.info_for_file());
                 }

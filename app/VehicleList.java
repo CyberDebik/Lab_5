@@ -3,7 +3,6 @@ package app;
 import classes.Vehicle;
 import commands.*;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,7 +15,8 @@ public class VehicleList {
     /**
      * Время инициилизации коллекции
      */
-    public final LocalDate localDate = LocalDate.now();
+    public final LocalDate initializationDate = LocalDate.now();
+
     /**
      * Коллекция, содержащая объекты Vehicle
      */
@@ -26,9 +26,9 @@ public class VehicleList {
      * Метод для проверки и выполнения введённой команды
      *
      * @param command команда
-     * @throws IOException если что-то пойдет не так
+     * @throws Exception если что-то пойдет не так
      */
-    public void commandChoose(String command) throws IOException {
+    public void commandChoose(String command) throws Exception {
         HashMap<String, Command> commandMap = new HashMap<>();
         commandMap.put("HELP", new Help());
         commandMap.put("INFO", new Info());

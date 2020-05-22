@@ -1,7 +1,6 @@
 import app.CSV;
 import app.VehicleList;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -9,7 +8,7 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         VehicleList vehicleList = new VehicleList();
         CSV.read(vehicleList);
         while (true) {

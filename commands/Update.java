@@ -5,7 +5,6 @@ import app.VehicleList;
 import classes.Vehicle;
 
 import java.time.ZonedDateTime;
-import java.util.Objects;
 
 /**
  * Класс команды update
@@ -28,7 +27,7 @@ public class Update extends Command {
                 ZonedDateTime time = null;
                 long id = Long.parseLong(strings[0].trim());
                 for (Vehicle vehicle : vehicleList.vehicles) {
-                    if (Objects.equals(id, vehicle.getID())) {
+                    if (id == vehicle.getID()) {
                         time = vehicle.getCreationDate();
                     }
                 }
